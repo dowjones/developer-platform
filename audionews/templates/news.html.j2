@@ -1,0 +1,48 @@
+{% extends 'base.html.j2' %}
+
+{% block title %}
+  My News - DJ Audio News
+{% endblock %}
+
+{% block content %}
+
+  <!-- section header goes here -->
+
+  <script src="/static/lib/moment/moment-with-locales.min.js"></script>
+  <div class="blog-page area-padding">
+    <div class="container">
+      <div class="row">
+
+        <h2>Random News</h2>
+        <!-- Start single blog -->
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="page-head-blog">
+                <div class="single-blog-page">
+                  <!-- recent start -->
+                  <div class="left-blog">
+                    <div class="random-news">
+                      <!-- start single post -->
+                      <div class="recent-single-post">
+                        <div class="pst-content">
+                          <p><a href="#"></a>Title of the news item</a></p>
+                          <p>Snippet showing the first hundred characters from the article...</p>
+                        </div>
+                      </div>
+                      <!-- End single post -->
+                    </div>
+                  </div>
+                  <!-- recent end -->
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Blog Area -->
+
+  <div class="clearfix"></div>
+  {% endblock %}
+
+  {% block customscripts %}
+  <script src="/static/js/news.js"></script>
+  {% endblock %}

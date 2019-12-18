@@ -1,0 +1,83 @@
+{% extends 'base.html.j2' %}
+
+{% block title %}
+  View Article - DJ RetailInvestmentDemo
+{% endblock %}
+
+{% block content %}
+<script src="/static/lib/moment/moment-with-locales.min.js"></script>
+<script>
+  var articleContent = {{ article | tojson }}
+</script>
+<div class="container">
+<!-- Wrapper -->
+  <div class="row"> 
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <!-- single-blog start -->
+      <article class="blog-post-wrapper">
+        <div class="post-thumbnail">
+          <img src="/static/img/blog/6.jpg" alt="" />
+        </div>
+
+        <div class="post-information">
+
+          <h2 class="article-title"></h2>
+
+          <div class="entry-meta">
+            <span class="author-meta">
+              <i class="fa fa-building-o"></i>
+              <span class="publisher-name"></span>
+            </span>
+            <span><i class="fa fa-calendar-o"></i>
+              <span class="publication-date"></span>
+            </span>
+          </div>
+          <div class="entry-meta">
+            <div class="audio-reader">
+              <img src="/static/img/listen-article-play.png" alt="Listen to article" onclick="playAudioReader()" >
+              <!-- <audio src="/static/sample.mp3" controls autoplay >
+                Your browser does not support the audio element.
+              </audio> -->
+            </div>
+          </div>
+          
+          <div class="article-content">
+
+          </div>
+
+        </div>
+      </article>
+      <!-- single-blog end -->
+    </div>
+  </div>
+
+<div class="clear"></div>
+<div class="row"> 
+  <div class="col-md-6 col-sm-6 col-xs-12">
+<div class="single-blog-page">
+    <h4>Related News</h4>
+    <div class="related-news">
+      <!-- start single post -->
+      <div class="recent-single-post">
+          <div class="post-img">
+            <a href="#">
+                  <img src="/static/img/blog/1.jpg" alt="">
+              </a>
+          </div>
+          <div class="pst-content">
+            <p><a href="#"></a>Title of the news item</a></p>
+            <p>Snippet showing the first hundred characters from the article...</p>
+          </div>
+        </div>
+        <!-- End single post -->
+    </div>
+  </div>
+</div>
+</div>
+</div>
+  <a href="#" class="back-to-news"><i class="fa fa-chevron-left">Back</i></a>
+{% endblock %}
+
+{% block customscripts %}
+<script src="/static/js/viewarticle.js"></script>
+{% endblock %}

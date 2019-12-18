@@ -1,0 +1,14 @@
+{
+    "python.pythonPath": "/anaconda3/envs/flaskwebapp/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=120",
+        "--ignore=E401"
+    ],
+    "restructuredtext.confPath": "",
+    "restructuredtext.linter.extraArgs": [
+        "--ignore D001"
+    ]
+}
