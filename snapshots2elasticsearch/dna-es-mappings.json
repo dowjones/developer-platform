@@ -1,0 +1,202 @@
+{
+    "mappings": {
+        "properties": {
+            "action": {
+                "type": "keyword"
+            },
+            "an": {
+                "type": "keyword"
+            },
+            "body": {
+                "type": "text"
+            },
+            "body_dv": {
+                "type": "dense_vector",
+                "dims": 512
+              },
+            "byline": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "company_codes": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "company_codes_about": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "company_codes_association": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "company_codes_lineage": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "company_codes_occur": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "company_codes_relevance": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "copyright": {
+                "type": "text"
+            },
+            "currency_codes": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "document_type": {
+                "type": "keyword"
+            },
+            "industry_codes": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "ingestion_datetime": {
+                "type": "date",
+                "format": "epoch_millis"
+            },
+            "language_code": {
+                "type": "keyword"
+            },
+            "market_index_codes": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "modification_date": {
+                "type": "date",
+                "format": "epoch_millis"
+            },
+            "modification_datetime": {
+                "type": "date",
+                "format": "epoch_millis"
+            },
+            "person_codes": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "publication_date": {
+                "type": "date",
+                "format": "epoch_millis"
+            },
+            "publication_datetime": {
+                "type": "date",
+                "format": "epoch_millis"
+            },
+            "publisher_name": {
+                "type": "keyword"
+            },
+            "region_codes": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "region_of_origin": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "section": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "source_code": {
+                "type": "keyword"
+            },
+            "source_name": {
+                "type": "keyword"
+            },
+            "subject_codes": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "title": {
+                "type": "text"
+            },
+            "title_dv": {
+                "type": "dense_vector",
+                "dims": 512
+              },
+            "word_count": {
+                "type": "integer"
+            }
+        }
+    }
+}
