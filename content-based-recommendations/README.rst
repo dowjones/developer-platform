@@ -3,7 +3,7 @@ Content-Based Recommendations
 
 This solution pattern identifies related content using text embeddings to create a content-based recommendation system. This pattern is applicable when developing mobile or web applications requiring personalization to increase productivity and engagement.
 
-See `this solution pattern <https://developer.dowjones.com/solution-patterns/details/content-based-recommendations>`_ in our Developer Platform site.
+See a `high-level description of this pattern <https://developer.dowjones.com/solution-patterns/details/content-based-recommendations>`_ in our Developer Platform site.
 
 The article `How to build a content-based movie recommender system with Natural Language Processing <https://towardsdatascience.com/how-to-build-from-scratch-a-content-based-movie-recommender-with-natural-language-processing-25ad400eb243>`_ can provide a good idea of the general concept applied in this solution.
 

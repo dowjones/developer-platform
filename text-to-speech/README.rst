@@ -3,6 +3,8 @@ Text to Speech
 
 Sample Web Application in Flask, that renders a set of random articles from the public BigQuery news sample, and when reading the particular article, allows to listen an audio version.
 
+See a `high-level description of this pattern <https://developer.dowjones.com/solution-patterns/details/text-to-speech>`_ in our Developer Platform site.
+
 The application is a Bootstrap template that implemets few front-end and back-end endpoints within the same file (app.py), and uses some external files emmulating the use of external services.
 
 * **App**: Starting point, defines the Flask routes for front-end and back-end functionalities
