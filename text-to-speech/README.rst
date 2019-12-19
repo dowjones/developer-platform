@@ -17,9 +17,13 @@ The application is a Bootstrap template that implemets few front-end and back-en
 Requirements
 =============
 
-Ensure all dependencies listed in the **requirements.txt** file, are installed.
+Ensure all dependencies listed in the **requirements.txt** file, are installed. This can be quickly completed by running the following command. It is highly advisable to use a separate **conda** or **virtualenv** Python environment.
 
-The following steps asume the use of Google Cloud Platform (GCP) for both, Text-to-Speech and Cloud Storage. Step 1 asumes that a GCP project is created and active. For guidance about creating projects in GCP see the article `Creating and Managing Projects <https://cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project>`_.
+.. code-block::
+
+    $ pip install -r requirements.txt
+
+The following steps asume the use of Google Cloud Platform (GCP), Text-to-Speech, BigQuery and Cloud Storage. Step 1 asumes that a GCP project is created and active. For guidance about creating projects in GCP see the article `Creating and Managing Projects <https://cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project>`_.
 
 
 1. Create a GCP Service Account
