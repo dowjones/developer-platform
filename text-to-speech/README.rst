@@ -38,9 +38,10 @@ This sample application uses the standard authentication method preferred for ap
 --------------------------------------------
 
 Follow the steps in `grant user roles <https://cloud.google.com/iam/docs/granting-roles-to-service-accounts>`_, and ensure to assign the following ones:
-- BigQuery Data Viewer
-- BigQuery Job User
-- Storage Object Viewer
+
+    - BigQuery Data Viewer
+    - BigQuery Job User
+    - Storage Object Viewer
 
 
 3. Enable the Text To Speech API

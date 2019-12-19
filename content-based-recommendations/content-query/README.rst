@@ -1,5 +1,5 @@
-Content-Based Recommender - Content Query
-#########################################
+Content-Based Recommendations - Content Query
+#############################################
 
 
 Overview

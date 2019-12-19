@@ -1,5 +1,5 @@
-Content-Based Recommender - Data Load
-#####################################
+Content-Based Recommendations - Data Load
+#########################################
 
 Sample code to read data from snapshot files (in AVRO format), enrich articles metadata, and import the output into Elasticsearch.
 
