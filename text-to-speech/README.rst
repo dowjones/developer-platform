@@ -1,8 +1,5 @@
-Dow Jones DNA Audio News Website
-###################################
-
-Overview
-=========
+Text to Speech
+##############
 
 Sample Web Application in Flask, that renders a set of random articles from the public BigQuery news sample, and when reading the particular article, allows to listen an audio version.
 
@@ -19,6 +16,8 @@ The application is a Bootstrap template that implemets few front-end and back-en
 
 Requirements
 =============
+
+Ensure all dependencies listed in the **requirements.txt** file, are installed.
 
 The following steps asume the use of Google Cloud Platform (GCP) for both, Text-to-Speech and Cloud Storage. Step 1 asumes that a GCP project is created and active. For guidance about creating projects in GCP see the article `Creating and Managing Projects <https://cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project>`_.
 

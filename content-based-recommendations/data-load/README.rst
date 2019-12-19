@@ -1,28 +1,21 @@
-Load Dow Jones DNA Snapshot to Elasticsearch
-############################################
+Content-Based Recommender - Data Load
+#####################################
 
-Sample code to read data from snapshot files, enrich articles metadata, and import the output into Elasticsearch. It uses some methods created in a common library (`djdna_common <https://github.com/miballe/djdna_common>`_) included as a symbolic link.
+Sample code to read data from snapshot files (in AVRO format), enrich articles metadata, and import the output into Elasticsearch.
+
+Before using, ensure all Python dependencies listed in the **requirements.txt** file, are installed.
 
 
-djdna_common
-============
+common
+======
 
-Set of common methods that eases operations like reading DNA Snapshots AVRO files, calculating new features or interacting with Elasticsearch. These methods are for illustration purposes and don't have a robust coding to validate unexpected cases or handling exceptions. For this reason it is not distributed as a Python package. It is however used among multiple Dow Jones DNA examples.
-
-To use these methods, clone this and the djdna_common repository to the same base directory, and (if necessary) create a symbolic link or copy the folder content. A sample sequence looks like this:
-
-.. code-block::
-
-    $ git clone https://github.com/miballe/djdna-snapshot2elasticsearch.git
-    $ git clone https://github.com/miballe/djdna_common
-    $ cd djdna-snapshot2elasticsearch
-    $ ln -s ../djdna_common/ djdna_common
+Set of common methods that eases operations like reading Factiva Snapshots AVRO files, calculating new features or interacting with Elasticsearch. These methods are for illustration purposes and don't have a robust coding to validate unexpected cases or handling exceptions. For this reason it is not distributed as a Python package. It is however used among multiple Developer Platform examples.
 
 
 dna-es-mappings.json
 ====================
 
-Mappings file to create a new index in Elasticsearch. This file contains a slightly modified field structure with some additional fields for embeddings (title and body). The following excerpt shows some of the highlights of this file.
+Mappings file to create a new index in Elasticsearch. This file contains a slightly modified field structure than the original Snapshot, with some additional fields for embeddings (title and body). The following excerpt shows some of the highlights of this file.
 
 .. code-block:: javascript
 
@@ -35,7 +28,7 @@ Mappings file to create a new index in Elasticsearch. This file contains a sligh
         },
 
 
-A new index matching the DNA schema can be created by using this file and the following code. This code uses the Python Elasticsearch library.
+A new index can be created by using this file and the following code. This code uses the Python Elasticsearch library.
 
 .. code-block:: python
 
@@ -50,7 +43,8 @@ A new index matching the DNA schema can be created by using this file and the fo
         ix_map = json.load(ix_file)
     es_client.indices.create(index=ix_name, body=ix_map)
 
+
 load-dna-data.py
 ================
 
-This file has the main logic to read a Snapshot AVRO files and load their content to a pandas DataFrame. Then, it enriches the dataset with some embedding to the title and body fields, and finally, the final outcome is loaded to Elasticsearch.
+This file has the main logic to read a Snapshot AVRO files and load their content to a pandas DataFrame. Then, it enriches the dataset with some embedding from the title and body fields. Finally, the outcome is loaded to Elasticsearch.

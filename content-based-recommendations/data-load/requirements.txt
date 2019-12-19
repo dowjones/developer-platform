@@ -1,0 +1,4 @@
+elasticsearch>=7.1.0
+pandas>=0.25.3
+tensorflow_hub>=0.7.0
+fastavro>=0.22.7
