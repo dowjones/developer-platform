@@ -12,10 +12,6 @@ The application is a Bootstrap template that implemets few front-end and back-en
 * **news_repo**: Contains the methods that work as an interface to a Cloud Storage environment where the generated audio files are stored.
 * **news_tts**: Methods to interact with a Text-To-Speech service. This can be easily reconfigured to use the services offered by the common Cloud providers.
 
-.. image:: static/img/audionews-screenshot.png
-   :align: center
-   :scale: 50 %
-
 Requirements
 =============
 
