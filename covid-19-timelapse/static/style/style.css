@@ -1,0 +1,108 @@
+@font-face{
+    font-family: "SimplonRegular";
+    src: url(/static/font/simplonnorm-regular.woff2);
+}
+
+.header-container {
+    background-color: #2C3136 !important;
+    border:1px solid #2C3136 !important;
+}
+.nav-header{
+    background-color: #2C3136 !important;
+    border:1px solid #2C3136 !important;
+}
+.article_list a:hover {
+    color: #0080c3;
+}
+
+.markdown-text h3 {
+    font-family: "SimplonRegular";
+    font-weight: 700;
+    color:#007ea8;
+    font-size: 24px;
+}
+
+.markdown-text p{
+    font-family: "SimplonRegular";
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #edeef2;
+}
+.article-button{
+    color: #fafafa;
+    background-color: #007ea8 ;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 9px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    border: 1px solid #007ea8;
+    text-transform: capitalize;
+}
+
+.article-card-list{
+    border-bottom: 1px solid #5d84b3 !important;
+    margin-bottom: 10px;
+    padding: 4px;
+    background-color: #39485a;
+}
+.card-body{
+    background-color: #39485a;
+}
+.card-title {
+    font-family: "SimplonRegular";
+    font-size: 18px;
+    font-weight: normal;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.markdown-text {
+    background-color: #39485a;
+}
+.card {
+    background-color: #39485a;
+    margin-top:10px;
+    border: 1px solid #39485a;
+
+}
+.article-date{
+    color:#edeef2;
+    font-size: 12px;
+}
+.articles-container{
+    margin-left: 15px;
+}
+.map-container{
+    margin-left: 15px;
+}
+
+.header {
+    font-Family: "SimplonRegular";
+    color: #007ea8;
+    font-size: 50px;
+    letter-spacing: 3px;
+    padding: 0px 0px 0px 5px;
+}
+.bubble-chart-div{
+        height: 90%;
+}
+.card-header{
+    color: #F8F9FB; 
+    font-family:"SimplonRegular";
+    background-color:#39485A; 
+    padding: 25px 0px 5px 15px;
+    font-size:17px;
+}
+
+.articles-div{
+    height: 450px;
+    overflow: auto;
+}
+.main-container{
+     background-color: #2C3136;
+}
+.slider-container{
+    margin-left: 15px;
+}

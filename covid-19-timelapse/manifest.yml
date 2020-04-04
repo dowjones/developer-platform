@@ -1,0 +1,5 @@
+---
+applications:
+ - name: dj_dashboard_covid19
+   random-route: true
+   memory: 512M
