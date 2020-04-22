@@ -23,10 +23,12 @@ The sample queries need to be implemented within a UI project or API that intend
                                 "query": {
                                     "range": {
                                         "publication_date": {
-                                            "gte": "now-8d/d"  # Restrict the search to items published within the last 8 days
+                                            # Restricts query to items published within the last 7 days
+                                            "gte": "now-7d/d"
                                         }
                                     }
                                 },
+                                # Script runs on top of 'query > range' results.
                                 "script": {
                                     "source": "cosineSimilarity(params.query_vector, 'all_embed') + 1.0",
                                     "params": {
