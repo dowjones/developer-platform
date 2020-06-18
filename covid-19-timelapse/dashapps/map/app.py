@@ -101,7 +101,7 @@ def create_map(date):
   #print(tmpconsolidated_df)
   list_hovertext = []
   for _, row in tmpconsolidated_df.iterrows():
-      list_hovertext.append(f"<i>Cases confirmed: </i>{row['Confirmed']}<b><br>Deaths confirmed: </b>{row['Deaths']}<br>Recovered: {row['Recovered']}")
+      list_hovertext.append(f"<b>Cases</b><br>Confirmed: {row['Confirmed']}<br>Fatalities: {row['Deaths']}<br>Recovered: {row['Recovered']}")
 
   consolidated_df.to_pickle('./covidmap.pickle')
   data = [go.Scattermapbox(
@@ -115,14 +115,14 @@ def create_map(date):
       marker=dict(
           sizemin=2,
           sizemode='area',
-          color='darkorange',
-          opacity=.8,
-          sizeref=200
+          color='darkred',
+          opacity=.7,
+          sizeref=50
       )
   )]
-  layout = go.Layout(autosize=True,height=400,
+  layout = go.Layout(autosize=True,height=550,
                      mapbox=dict(accesstoken='pk.eyJ1Ijoic2UtY292aWQiLCJhIjoiY2s4OHNlMHM2MDlnazNlb2M2NHdjYmNoayJ9.GoiFCNVSkuN2Shk_hyt5yQ',
-                                 bearing=0, pitch=0, zoom=0, center=dict(lat=0.0, lon=0.0), style='dark'), margin=dict(t=0, b=0, l=0, r=0))
+                                 bearing=0, pitch=0, zoom=1, center=dict(lat=25.0, lon=0.0), style='light'), margin=dict(t=0, b=0, l=0, r=0))
   fig = dict(data=data, layout=layout)
 
   return fig
