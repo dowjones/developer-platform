@@ -79,7 +79,7 @@ slider_card = dbc.Card(
 
 world_card = dbc.Card(
     dbc.CardBody([
-        html.H5('Map of Cases (John Hopkins University Dataset)', className="card-header"),
+        html.H5('Map of Cases (Johns Hopkins University Dataset)', className="card-header"),
         #html.Div(
         #    children=dcc.Graph(
         #            id='indicators',
