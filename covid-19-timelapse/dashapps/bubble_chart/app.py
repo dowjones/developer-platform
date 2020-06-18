@@ -88,32 +88,32 @@ def create_bubble_figure(the_date):
     scatterdata.extend(bubbledata)
     
     fig = make_subplots(
-        rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.1
+        rows=1, cols=1, shared_xaxes=True, vertical_spacing=0.1
     )
 
     for trace in scatterdata:
         fig.add_trace(trace, row=1, col=1)
 
-    fig.add_trace(bardata, row=2, col=1)
+    #fig.add_trace(bardata, row=2, col=1)
 
-    fig['layout']['plot_bgcolor'] = '#39485A'
-    fig['layout']['paper_bgcolor'] = '#39485A'
-    fig['layout']['font'] = dict(color = '#F8F9FB', family="SimplonRegular")
+    fig['layout']['plot_bgcolor'] = '#FFFFFF'
+    fig['layout']['paper_bgcolor'] = '#FFFFFF'
+    fig['layout']['font'] = dict(color = '#333333', family="SimplonRegular")
 
-    fig['layout']['xaxis2']['title']['text'] = 'Article Count'
-    fig['layout']['yaxis1']['title']['text'] = 'Deaths'
+    fig['layout']['xaxis1']['title']['text'] = 'Volume of News Articles'
+    fig['layout']['yaxis1']['title']['text'] = '# of COVID-19 Deaths'
 
     fig['layout']['xaxis1']['type'] = 'log'
     fig['layout']['xaxis1']['showgrid'] = False
-    fig['layout']['xaxis2']['type'] = 'log'
-    fig['layout']['xaxis2']['showgrid'] = False
+    #fig['layout']['xaxis2']['type'] = 'log'
+    #fig['layout']['xaxis2']['showgrid'] = False
     fig['layout']['yaxis1']['type'] = 'log'
     fig['layout']['yaxis1']['showgrid'] = False
 
     fig['layout']['xaxis1']['range'] = [1,np.log10(cases_counts_filtered['Article Count'].max())*1.2]
-    fig['layout']['xaxis2']['range'] = [1,np.log10(cases_counts_filtered['Article Count'].max())*1.2]
+    #fig['layout']['xaxis2']['range'] = [1,np.log10(cases_counts_filtered['Article Count'].max())*1.2]
     fig['layout']['yaxis1']['range'] = [1,np.log10(cases_counts_filtered['Deaths'].max())*1.2]
-    fig['layout']['title'] = 'News Coverage'
+    #fig['layout']['title'] = 'News Coverage'
 
     return fig
 
