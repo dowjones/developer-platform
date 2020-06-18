@@ -232,7 +232,8 @@ def generate_figure(source_df):
             'text': list(dataset_by_day_and_term['term']),
             'name': term,
             'line': {
-                'width': 3
+                'width': 1.5,
+                'shape': 'spline',
             },
             'showlegend': True
         }
@@ -264,7 +265,8 @@ def generate_figure(source_df):
                 'name': term,
                 'line': {
                     # 'color': term_color_dict[term]
-                    'width': 3
+                    'width': 1.5,
+                    'shape': 'spline',
                 },
                 'showlegend': True
             }
@@ -317,7 +319,8 @@ def update_terms_figure(date, terms_df):
             'text': [term],
             'name': term,
             'line': {
-                'width': 3
+                'width': 1.5,
+                'shape': 'spline'
             }
         }
         traces.append(data_dict)
@@ -328,18 +331,19 @@ def update_terms_figure(date, terms_df):
             xaxis = {
                 'range': [terms_df['day'].min(), terms_df['day'].max()],
                 'title': 'Publication Date',
-                'showgrid': False
+                'showgrid': True
             },
             yaxis = {
                 'range': [0, 3500],
-                'title': 'Term Frequency',
-                'showgrid': False
+                'title': '# Mentions',
+                'showgrid': True
             },
             hovermode = 'x',
-            title = 'Bi-grams in the news',
-            paper_bgcolor = '#39485A',
-            plot_bgcolor = '#39485A',
-            font = dict(color = 'white', family='SimplonRegular')
+            legend_title_text='Trending Terms',
+            ##title = 'Bi-grams in the news',
+            paper_bgcolor = '#FFFFFF',
+            plot_bgcolor = '#FFFFFF',
+            font = dict(color = '#333333', family='SimplonRegular')
         )
     }
 

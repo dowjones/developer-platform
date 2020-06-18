@@ -8,6 +8,7 @@ from .utils import ngram_dataframe_from_file, generate_figure, update_terms_figu
 memo = {}
 terms_df = ngram_dataframe_from_file(r'dashapps/term_frequency/results/bigrams.json', read_from_file=True)
 map_covid_dates = config.map_covid_dates
+#fig_layout = dict(uirevision = True)
 
 def create_term_frequency(date):    
     test_results = update_terms_figure(date, terms_df)
