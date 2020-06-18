@@ -4,7 +4,9 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objects as go
+import plotly.express as px
 from dash.dependencies import Input, Output
+from plotly.subplots import make_subplots
 
 global_ndays_range = 27
 
@@ -17,11 +19,16 @@ industries_hrchy = industries_hrchy.replace(np.nan, '', regex=True)
 # --- End --- Reading base data for the Sunburst
 
 # --- Start --- Load base Sunburst (no data)
-fig_layout = dict(margin=dict(t=100, l=0, r=0, b=0),
-    autosize=True, paper_bgcolor='#39485A',
-    plot_bgcolor='#39485A',
-    font = dict(color = '#F8F9FB', family='SimplonRegular'),
-    title = 'Industry Sentiment')
+fig_layout = dict(margin=dict(t=20, l=20, r=20, b=20),
+    autosize=True,  paper_bgcolor='#FFFFFF', height=800,
+    plot_bgcolor='#FFFFFF',
+    font = dict(color = '#666666', family='SimplonRegular'),
+    grid= dict(columns=3, rows=1),
+#    title = 'Industry Sentiment',
+    uirevision = True,
+    uniformtext = dict(minsize=12, mode='show'),
+    #showlegend = True
+    )
 
 def create_sunburst(selected_date) -> go.Figure:
     end_date = global_start_day + pd.DateOffset(days=selected_date)
@@ -36,13 +43,43 @@ def create_sunburst(selected_date) -> go.Figure:
     root_item_df = pd.DataFrame([root_item_list], columns=['ind_fcode', 'name', 'parent', 'industry_code', 'sentiment'])
     filtered_hrchy = filtered_hrchy.append(root_item_df, ignore_index=True)
 
-    fig = go.Figure(data=[go.Sunburst(
+    fig = go.Figure(data=
+                        [go.Sunburst(
                             ids=filtered_hrchy['ind_fcode'],
                             labels=filtered_hrchy['name'],
                             parents=filtered_hrchy['parent'],
-                            marker=dict(colors=filtered_hrchy['sentiment'], colorscale='RdBu', cmid=0),
-                            hovertemplate='<b>(%{id})</b> %{label} <br>- Sentiment score: %{color:.2f}'
-                        )],
+                            marker=dict(colors=filtered_hrchy['sentiment'], colorscale='Temps_r', cmax=1, cmin=-1, cmid=np.average(filtered_hrchy['sentiment'], weights=filtered_hrchy['sentiment']), showscale=True , line=dict(color='#333333',width=0.1)),
+                            hovertemplate='<b>(%{id})</b> %{label} <br>- Sentiment score: %{color:.2f}',
+                            maxdepth=2,
+                            domain=dict(column=0, row=0),
+                            #insidetextorientation='radial',
+                            level = 'i13'
+                        ),
+                        go.Sunburst(
+                            ids=filtered_hrchy['ind_fcode'],
+                            labels=filtered_hrchy['name'],
+                            parents=filtered_hrchy['parent'],
+                            marker=dict(colors=filtered_hrchy['sentiment'], colorscale='Temps_r', cmax=1, cmin=-1, cmid=np.average(filtered_hrchy['sentiment'], weights=filtered_hrchy['sentiment']), showscale=True, line=dict(color='#333333',width=0.1) ),
+#                            marker=dict(colors=filtered_hrchy['sentiment'], colorscale='Temps_r', cmax=0.5, cmin=-0.5, cmid=0, showscale=True, line=dict(color='#333333',width=0.1) ),
+                            hovertemplate='<b>(%{id})</b> %{label} <br>- Sentiment score: %{color:.2f}',
+                            maxdepth=2,
+                            domain=dict(column=1, row=0),
+                            #insidetextorientation='radial'
+                            level = 'ifinal'
+                        ),
+                        go.Sunburst(
+                            ids=filtered_hrchy['ind_fcode'],
+                            labels=filtered_hrchy['name'],
+                            parents=filtered_hrchy['parent'],
+                            marker=dict(colors=filtered_hrchy['sentiment'], colorscale='Temps_r', cmax=1, cmin=-1, cmid=np.average(filtered_hrchy['sentiment'], weights=filtered_hrchy['sentiment']), showscale=True, line=dict(color='#333333',width=0.1) ),
+#                            marker=dict(colors=filtered_hrchy['sentiment'], colorscale='Temps_r', cmax=0.5, cmin=-0.5, cmid=0, showscale=True, line=dict(color='#333333',width=0.1) ),
+                            hovertemplate='<b>(%{id})</b> %{label} <br>- Sentiment score: %{color:.2f}',
+                            maxdepth=2,
+                            domain=dict(column=2, row=0),
+                            #insidetextorientation='radial'
+                            level = 'itsp'
+                        )
+                        ],
                         layout=fig_layout
                     )
     return fig
