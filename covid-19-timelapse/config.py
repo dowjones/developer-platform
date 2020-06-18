@@ -3,7 +3,7 @@ from datetime import date
 
 f_date = date.today()
 # Set the last day of a range of dates
-l_date = date(2020, 4, 1)
+l_date = date(2020, 4, 2)
 
 delta = f_date - l_date
 days_offset = delta.days
