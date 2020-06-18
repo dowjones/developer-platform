@@ -21,9 +21,9 @@ def Article_list(an_list, articles):
         dbc.Card([
             dbc.CardBody(
                 [
-                    html.H4(articles.loc[articles['an'] == an, 'title'].values[0], className="card-title"),
-                    html.P('Published: ' + articles.loc[articles['an'] == an, 'publication_date'],className="article-date"),
-                    dbc.Button("Open article", className="article-button",href='/article/'+an),                   
+                    html.A(href='/article/'+an, children=html.H4(articles.loc[articles['an'] == an, 'title'].values[0], className="article-card-title")),
+                    html.P('Published: ' + articles.loc[articles['an'] == an, 'publication_date'] + ' | Source: ' + articles.loc[articles['an'] == an, 'source_name'],className="article-date"),
+                    #dbc.Button("Open article", className="article-button",href='/article/'+an),                   
                 ]
             ),
         ], className='article-card-list')
