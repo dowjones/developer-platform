@@ -13,8 +13,8 @@ map_covid_dates = config.map_covid_dates
 
 def create_slider():
     return html.Div([
-        html.P('COVID-19 Term Timeline', className="card-header"),
         html.Div([], id='interval-holder'),
+        daq.ToggleSwitch(id = 'play', value = False, style={'marginBottom': 5, 'marginTop': 15}),
         dcc.Slider(
             id='date-slider',
             min=0,
@@ -22,10 +22,10 @@ def create_slider():
             value=0,
             marks=map_covid_dates,
             step=None
-        ),
-        daq.ToggleSwitch(id = 'play', value = False)
+        )
     ],
-    style = { 'backgroundColor': '#39485A'})
+    #style = { 'backgroundColor': '#FFFFFF'}
+    )
 
 def isInt(s):
     try: 
