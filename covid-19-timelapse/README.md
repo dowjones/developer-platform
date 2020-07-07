@@ -7,7 +7,8 @@ This pattern leverages Dow Jones and public datasets to build a time-lapse dashb
 
 The solution consumes Dow Jones news and industry datasets via the Factiva Snapshots API.
 
-The data for this solution comes from developers’ first-party industry lists and the following third-party public datasets:
+The data for this solution comes from developers’ first-party industry lists and the following third-party public dataset:
+
 Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)
 
 
