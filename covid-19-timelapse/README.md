@@ -9,7 +9,7 @@ The solution consumes Dow Jones news and industry datasets via the Factiva Snaps
 
 The data for this solution comes from developers’ first-party industry lists and the following third-party public datasets:
 Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)
-Harvard Global Health Institute (HGHI)
+
 
 This solution is built inside a Heroku container, which hosts a Flask App for data processing and a Dash app for display. Graph objects are being synced/connected via a single controller within the Dash app and mapping tiles are provided via Mapbox.
 
