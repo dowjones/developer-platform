@@ -1,0 +1,30 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "lint": "./node_modules/.bin/eslint"
+  },
+  "engines": {
+    "node": "10"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "busboy": "^0.3.1",
+    "cors": "^2.8.5",
+    "firebase-admin": "^8.12.1",
+    "firebase-functions": "^3.6.1",
+    "yahoo-finance": "^0.3.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
