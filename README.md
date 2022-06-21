@@ -1,3 +1,5 @@
+# This repo is no longer maitained (Archived)
+
 # Dow Jones Developer Platform
 
 ## Solution Patterns repository index
