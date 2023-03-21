@@ -15,20 +15,20 @@ dependencies:
 
   # A powerful Http client for Dart, which supports interceptors, FormData, Request Cancellation,
   # File Downloading, Timeout etc.
-  dio: ^3.0.3
+  dio: ">=3.0.3 <6.0.0"
 
   # Flutter widgets that make it easy to implement the BLoC design pattern.
   flutter_bloc: ^4.0.0
 
   # Automatically generate code for converting to and from JSON by annotating Dart classes.
-  json_serializable: ^3.2.3
+  json_serializable: ">=3.2.3 <5.0.0"
 
   # Package provides internalization and localization facilities, including message translation,
   # plurals and genders, date/number formatting and parsing, and bidirectional text.
-  intl: ^0.16.0
+  intl: ">=0.16.0 <0.18.0"
 
   # Flutter plugin for launching a URL in the mobile platform. Supports iOS and Android.
-  url_launcher: ^5.2.0
+  url_launcher: ">=5.2.0 <7.0.0"
 
   # Flutter library to load and cache network images. Can also be used with placeholder and
   # error widgets.
@@ -36,19 +36,19 @@ dependencies:
 
   flutter_stetho: ^0.5.0
 
-  charts_flutter: ^0.9.0
+  charts_flutter: ">=0.9.0 <0.13.0"
 
   # Eslint checking
   pedantic: ^1.8.0
 
   # Path provider
-  path_provider: ^1.6.10
+  path_provider: ">=1.6.10 <3.0.0"
   
   google_sign_in: ^4.5.1
 
-  firebase_auth: ^0.16.1
+  firebase_auth: ">=0.16.1 <5.0.0"
 
-  firebase_database: ^3.0.7
+  firebase_database: ">=3.0.7 <11.0.0"
 
   webview_flutter: 0.3.22+1
   
